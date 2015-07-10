@@ -30,74 +30,92 @@
 }
 
 "#imagen":{
-	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 1 - (5).png",
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 4 - (7).png",
 	width: "100%",
 	height: "100%"
 }
-"#ojo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"18%",
+"#sol_iz":{
+	width:"4%",
+	height:"4%",
+	top:"24.5%",
+	left:"22.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#ojo_dr":{
+"#piramide_iz":{
 	width:"3%",
 	height:"3%",
-	top:"29%",
-	left:"70%",
+	top:"50%",
+	left:"15%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_iz":{
+"#sombrero_iz":{
 	width:"3%",
 	height:"3%",
-	top:"32.5%",
-	left:"25.5%",
+	top:"54.5%",
+	left:"10.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_dr":{
+"#zapato_iz":{
 	width:"3%",
 	height:"3%",
-	top:"32.5%",
-	left:"77.5%",
+	top:"75%",
+	left:"16%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
 "#cola_iz":{
 	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"33.5%",
+	height:"9%",
+	top:"55%",
+	left:"43%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+//
+"#sol_dr":{
+	width:"4%",
+	height:"4%",
+	top:"26%",
+	left:"72.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#piramide_dr":{
+	width:"3%",
+	height:"3%",
+	top:"50%",
+	left:"65%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#sombrero_dr":{
+	width:"3%",
+	height:"3%",
+	top:"54.5%",
+	left:"60.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#zapato_dr":{
+	width:"3%",
+	height:"3%",
+	top:"75%",
+	left:"66%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
 "#cola_dr":{
 	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"85.5%",
+	height:"9%",
+	top:"55%",
+	left:"93%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#fuego_iz":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"37%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#fuego_dr":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"89%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
+//
 "#estrella_1":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	left:"10%",
@@ -115,6 +133,11 @@
 	height: "40%"
 }
 "#estrella_4":{
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
+	width: "10%",
+	height: "40%"
+}
+"#estrella_5":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	width: "10%",
 	height: "40%"

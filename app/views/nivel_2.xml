@@ -1,18 +1,18 @@
 <Alloy>
-	<Window class="container">
+	<Window class="container" id="win">
 		<View id="view_header">
 			<Label id="title">Encúentre la diferencia</Label>
 		</View>
 		<View id="view_body">
 			<View id="imagen">
-				<Button id="ojo_iz"></Button>
-				<Button id="ojo_dr"></Button>
-				<Button id="circulo_iz"></Button>
-				<Button id="circulo_dr"></Button>
-				<Button id="cola_iz"></Button>
-				<Button id="cola_dr"></Button>
-				<Button id="fuego_iz"></Button>
-				<Button id="fuego_dr"></Button>
+				<Button id="cara_iz"></Button>
+				<Button id="nariz_iz"></Button>
+				<Button id="diario_iz_1"></Button>
+				<Button id="diario_iz_2"></Button>
+				<Button id="cara_dr"></Button>
+				<Button id="nariz_dr"></Button>
+				<Button id="diario_dr_1"></Button>
+				<Button id="diario_dr_2"></Button>
 			</View>
 		</View>
 		<View id="view_footer">

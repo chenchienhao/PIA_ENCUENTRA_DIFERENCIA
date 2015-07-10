@@ -1,12 +1,12 @@
 
-var aux_ojo_iz=false;
-var aux_ojo_dr=false;
-var aux_circulo_iz=false;
-var aux_circulo_dr=false;
-var aux_cola_iz=false;
-var aux_cola_dr=false;
-var aux_fuego_iz=false;
-var aux_fuego_dr=false;
+var aux_cara_iz=false;
+var aux_cara_dr=false;
+var aux_nariz_iz=false;
+var aux_nariz_dr=false;
+var aux_diario_iz_1=false;
+var aux_diario_dr_1=false;
+var aux_diario_iz_2=false;
+var aux_diario_dr_2=false;
 
 var punto=0;
 
@@ -43,90 +43,91 @@ function estrella (punto) {
 		alert("¡Felicitaciones!");
 	}
 }
-$.ojo_iz.add.addEventListener('click',function(e){
-	if(aux_ojo_iz==false){
-		aux_ojo_iz=true;
-		aux_ojo_dr=true;
+$.cara_iz.add.addEventListener('click',function(e){
+	if(aux_cara_iz==false){
+		aux_cara_iz=true;
+		aux_cara_dr=true;
 		punto=punto+1;
-		$.ojo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ojo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cara_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cara_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.ojo_dr.add.addEventListener('click',function(e){
-	if(aux_ojo_dr==false){
-		aux_ojo_iz=true;
-		aux_ojo_dr=true;
+$.cara_dr.add.addEventListener('click',function(e){
+	if(aux_cara_dr==false){
+		aux_cara_iz=true;
+		aux_cara_dr=true;
 		punto=punto+1;
-		$.ojo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ojo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cara_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cara_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.circulo_iz.add.addEventListener('click',function(e){
-	if(aux_circulo_iz==false){
-		aux_circulo_iz=true;
-		aux_circulo_dr=true;
+$.nariz_iz.add.addEventListener('click',function(e){
+	if(aux_nariz_iz==false){
+		aux_nariz_iz=true;
+		aux_nariz_dr=true;
 		punto=punto+1;
-		$.circulo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.circulo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.circulo_dr.add.addEventListener('click',function(e){
-	if(aux_circulo_dr==false){
-		aux_circulo_iz=true;
-		aux_circulo_dr=true;
+$.nariz_dr.add.addEventListener('click',function(e){
+	if(aux_nariz_dr==false){
+		aux_nariz_iz=true;
+		aux_nariz_dr=true;
 		punto=punto+1;
-		$.circulo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.circulo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.cola_iz.add.addEventListener('click',function(e){
-	if(aux_cola_iz==false){
-		aux_cola_iz=true;
-		aux_cola_dr=true;
+$.diario_iz_1.add.addEventListener('click',function(e){
+	if(aux_diario_iz_1==false){
+		aux_diario_iz_1=true;
+		aux_diario_dr_1=true;
 		punto=punto+1;
-		$.cola_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cola_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_iz_1.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_dr_1.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.cola_dr.add.addEventListener('click',function(e){
-	if(aux_cola_dr==false){
-		aux_cola_iz=true;
-		aux_cola_dr=true;
+$.diario_dr_1.add.addEventListener('click',function(e){
+	if(aux_diario_dr_1==false){
+		aux_diario_iz_1=true;
+		aux_diario_dr_1=true;
 		punto=punto+1;
-		$.cola_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cola_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_iz_1.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_dr_1.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.fuego_iz.add.addEventListener('click',function(e){
-	if(aux_fuego_iz==false){
-		aux_fuego_iz=true;
-		aux_fuego_dr=true;
+$.diario_iz_2.add.addEventListener('click',function(e){
+	if(aux_diario_iz_2==false){
+		aux_diario_iz_2=true;
+		aux_diario_dr_2=true;
 		punto=punto+1;
-		$.fuego_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.fuego_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_iz_2.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_dr_2.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.fuego_dr.add.addEventListener('click',function(e){
-	if(aux_fuego_dr==false){
-		aux_fuego_iz=true;
-		aux_fuego_dr=true;
+$.diario_dr_2.add.addEventListener('click',function(e){
+	if(aux_diario_dr_2==false){
+		aux_diario_iz_2=true;
+		aux_diario_dr_2=true;
 		punto=punto+1;
-		$.fuego_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.fuego_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_iz_2.backgroundColor="rgba(255,0,0,0.5)";
+		$.diario_dr_2.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
 $.label_AT.add.addEventListener('click',function(e){
+	$.win.close();
 });
 $.anterior.add.addEventListener('click',function(e){
-
+	$.win.close();
 });
 $.label_SG.add.addEventListener('click',function(e){
 	if(punto==4){
@@ -139,11 +140,10 @@ $.label_SG.add.addEventListener('click',function(e){
 });
 $.siguiente.add.addEventListener('click',function(e){
 	//if(punto==4){
-		var nivel_2=Alloy.createController('nivel_2').getView();
-		nivel_2.open();
+		var nivel_3=Alloy.createController('nivel_3').getView();
+		nivel_3.open();
 	//}
 	//else{
 	//	alert("¡Todavía no terminas el juego!");
 	//}
 });
-$.index.open();
