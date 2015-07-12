@@ -1,16 +1,16 @@
 
-var aux_pelo_iz=false;
-var aux_pelo_dr=false;
-var aux_nariz_iz=false;
-var aux_nariz_dr=false;
-var aux_ropaarriba_iz=false;
-var aux_ropaarriba_dr=false;
-var aux_ropaabajo_iz=false;
-var aux_ropaabajo_dr=false;
-var aux_dedo_iz=false;
-var aux_dedo_dr=false;
-var aux_cinta_iz=false;
-var aux_cinta_dr=false;
+var aux_cata_bigote_iz=false;
+var aux_cata_bigote_dr=false;
+var aux_cata_cola_iz=false;
+var aux_cata_cola_dr=false;
+var aux_pez_iz=false;
+var aux_pez_dr=false;
+var aux_perro_ojo_iz=false;
+var aux_perro_ojo_dr=false;
+var aux_perro_cola_iz=false;
+var aux_perro_cola_dr=false;
+var aux_pelota_iz=false;
+var aux_pelota_dr=false;
 
 var punto=0;
 
@@ -72,16 +72,11 @@ function estrella (punto) {
 		$.estrella_6.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		var dialog = Ti.UI.createAlertDialog({
 			title: 'Felicitaciones',
-			message: '¡Bien! ¡Vamos a siguiente nivel!',
+			message: '¡Bien! ¡Ya terminó todos los niveles!',
 			cancel: 1,
-    		buttonNames: ['Vamos', 'Cacelar']
+    		buttonNames: ['OK', 'Cacelar']
 		});
 		dialog.show();
-		//Desbloquear siguiente nivel.
-		
-		Ti.App.Properties.removeProperty("TF_diferencias5");
-		Ti.App.Properties.setBool("TF_diferencias5",true);
-		
 		dialog.addEventListener('click', function(e){
 			var aux_click=e.text;
 			Ti.API.info(aux_click);
@@ -90,138 +85,140 @@ function estrella (punto) {
 		      	Ti.API.info('The cancel button was clicked');
 		    }
 			else{
-				var nivel_6=Alloy.createController('nivel_6').getView();
-				nivel_6.open();
+				var inicio=Alloy.createController('index').getView();
+				inicio.open();
 			}	
 		});
 		var change_view=setInterval(function(){
 			dialog.hide();
-			var nivel_6=Alloy.createController('nivel_6').getView();
-			nivel_6.open();
+			var inicio=Alloy.createController('index').getView();
+			inicio.open();
 			clearInterval(change_view);
 		},5000);
+		var felicidad=Alloy.createController('felicidad').getView();
+		felicidad.open();
 	}
 }
-$.pelo_iz.add.addEventListener('click',function(e){
-	if(aux_pelo_iz==false){
-		aux_pelo_iz=true;
-		aux_pelo_dr=true;
+$.cata_bigote_iz.add.addEventListener('click',function(e){
+	if(aux_cata_bigote_iz==false){
+		aux_cata_bigote_iz=true;
+		aux_cata_bigote_dr=true;
 		punto=punto+1;
-		$.pelo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.pelo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_bigote_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_bigote_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.pelo_dr.add.addEventListener('click',function(e){
-	if(aux_pelo_dr==false){
-		aux_pelo_iz=true;
-		aux_pelo_dr=true;
+$.cata_bigote_dr.add.addEventListener('click',function(e){
+	if(aux_cata_bigote_dr==false){
+		aux_cata_bigote_iz=true;
+		aux_cata_bigote_dr=true;
 		punto=punto+1;
-		$.pelo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.pelo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_bigote_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_bigote_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.nariz_iz.add.addEventListener('click',function(e){
-	if(aux_nariz_iz==false){
-		aux_nariz_iz=true;
-		aux_nariz_dr=true;
+$.cata_cola_iz.add.addEventListener('click',function(e){
+	if(aux_cata_cola_iz==false){
+		aux_cata_cola_iz=true;
+		aux_cata_cola_dr=true;
 		punto=punto+1;
-		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_cola_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_cola_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.nariz_dr.add.addEventListener('click',function(e){
-	if(aux_nariz_dr==false){
-		aux_nariz_iz=true;
-		aux_nariz_dr=true;
+$.cata_cola_dr.add.addEventListener('click',function(e){
+	if(aux_cata_cola_dr==false){
+		aux_cata_cola_iz=true;
+		aux_cata_cola_dr=true;
 		punto=punto+1;
-		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_cola_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.cata_cola_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.ropaarriba_iz.add.addEventListener('click',function(e){
-	if(aux_ropaarriba_iz==false){
-		aux_ropaarriba_iz=true;
-		aux_ropaarriba_dr=true;
+$.pez_iz.add.addEventListener('click',function(e){
+	if(aux_pez_iz==false){
+		aux_pez_iz=true;
+		aux_pez_dr=true;
 		punto=punto+1;
-		$.ropaarriba_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ropaarriba_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.pez_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pez_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.ropaarriba_dr.add.addEventListener('click',function(e){
-	if(aux_ropaarriba_dr==false){
-		aux_ropaarriba_iz=true;
-		aux_ropaarriba_dr=true;
+$.pez_dr.add.addEventListener('click',function(e){
+	if(aux_pez_dr==false){
+		aux_pez_iz=true;
+		aux_pez_dr=true;
 		punto=punto+1;
-		$.ropaarriba_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ropaarriba_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.pez_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pez_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.ropaabajo_iz.add.addEventListener('click',function(e){
-	if(aux_ropaabajo_iz==false){
-		aux_ropaabajo_iz=true;
-		aux_ropaabajo_dr=true;
+$.perro_ojo_iz.add.addEventListener('click',function(e){
+	if(aux_perro_ojo_iz==false){
+		aux_perro_ojo_iz=true;
+		aux_perro_ojo_dr=true;
 		punto=punto+1;
-		$.ropaabajo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ropaabajo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_ojo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_ojo_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.ropaabajo_dr.add.addEventListener('click',function(e){
-	if(aux_ropaabajo_dr==false){
-		aux_ropaabajo_iz=true;
-		aux_ropaabajo_dr=true;
+$.perro_ojo_dr.add.addEventListener('click',function(e){
+	if(aux_perro_ojo_dr==false){
+		aux_perro_ojo_iz=true;
+		aux_perro_ojo_dr=true;
 		punto=punto+1;
-		$.ropaabajo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.ropaabajo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_ojo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_ojo_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
 
 //
-$.dedo_iz.add.addEventListener('click',function(e){
-	if(aux_dedo_iz==false){
-		aux_dedo_iz=true;
-		aux_dedo_dr=true;
+$.perro_cola_iz.add.addEventListener('click',function(e){
+	if(aux_perro_cola_iz==false){
+		aux_perro_cola_iz=true;
+		aux_perro_cola_dr=true;
 		punto=punto+1;
-		$.dedo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.dedo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_cola_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_cola_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.dedo_dr.add.addEventListener('click',function(e){
-	if(aux_dedo_dr==false){
-		aux_dedo_iz=true;
-		aux_dedo_dr=true;
+$.perro_cola_dr.add.addEventListener('click',function(e){
+	if(aux_perro_cola_dr==false){
+		aux_perro_cola_iz=true;
+		aux_perro_cola_dr=true;
 		punto=punto+1;
-		$.dedo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.dedo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_cola_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.perro_cola_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
 //
-$.cinta_iz.add.addEventListener('click',function(e){
-	if(aux_cinta_iz==false){
-		aux_cinta_iz=true;
-		aux_cinta_dr=true;
+$.pelota_iz.add.addEventListener('click',function(e){
+	if(aux_pelota_iz==false){
+		aux_pelota_iz=true;
+		aux_pelota_dr=true;
 		punto=punto+1;
-		$.cinta_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cinta_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelota_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelota_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.cinta_dr.add.addEventListener('click',function(e){
-	if(aux_cinta_dr==false){
-		aux_cinta_iz=true;
-		aux_cinta_dr=true;
+$.pelota_dr.add.addEventListener('click',function(e){
+	if(aux_pelota_dr==false){
+		aux_pelota_iz=true;
+		aux_pelota_dr=true;
 		punto=punto+1;
-		$.cinta_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cinta_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelota_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelota_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
@@ -233,21 +230,52 @@ $.anterior.add.addEventListener('click',function(e){
 	$.win.close();
 });
 $.label_SG.add.addEventListener('click',function(e){
-	if(punto==6||Ti.App.Properties.getBool("TF_diferencias5")==true){
-		var nivel_6=Alloy.createController('nivel_6').getView();
-		nivel_6.open();
+	if(punto==6){
+		var dialog_out = Ti.UI.createAlertDialog({
+			title: 'No hay más nivel',
+			message: '¿Quiere volver a menú principal?',
+			cancel: 1,
+    		buttonNames: ['OK', 'NO']
+		});
+		dialog_out.show();
+		dialog_out.addEventListener('click', function(e){
+			var aux_click=e.text;
+			Ti.API.info(aux_click);
+			if (e.index === e.source.cancel){
+				Ti.API.info('The cancel button was clicked');
+		    }
+			else{
+				var inicio=Alloy.createController('index').getView();
+				inicio.open();
+			}	
+		});
 	}
 	else{
 		alert("¡Todavía no terminas el juego!");
 	}
 });
 $.siguiente.add.addEventListener('click',function(e){
-	if(punto==6||Ti.App.Properties.getBool("TF_diferencias5")==true){
-		var nivel_6=Alloy.createController('nivel_6').getView();
-		nivel_6.open();
+	if(punto==6){
+		var dialog_out = Ti.UI.createAlertDialog({
+			title: 'No hay más nivel',
+			message: '¿Quiere volver a menú principal?',
+			cancel: 1,
+    		buttonNames: ['OK', 'NO']
+		});
+		dialog_out.show();
+		dialog_out.addEventListener('click', function(e){
+			var aux_click=e.text;
+			Ti.API.info(aux_click);
+			if (e.index === e.source.cancel){
+				Ti.API.info('The cancel button was clicked');
+		    }
+			else{
+				var inicio=Alloy.createController('index').getView();
+				inicio.open();
+			}	
+		});
 	}
 	else{
 		alert("¡Todavía no terminas el juego!");
 	}
 });
-

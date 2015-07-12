@@ -30,90 +30,92 @@
 }
 
 "#imagen":{
-	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 1 - (5).png",
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 7 - (5).png",
 	width: "100%",
 	height: "100%"
 }
-"#ojo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"18%",
+"#puerta_iz":{
+	width:"7%",
+	height:"18%",
+	top:"22.5%",
+	left:"17.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#ojo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"70%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#circulo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"25.5%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#circulo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"77.5%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#cola_iz":{
-	width:"3%",
-	height:"6%",
+"#rueda_iz":{
+	width:"5%",
+	height:"5%",
 	top:"37%",
-	left:"33.5%",
+	left:"36.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#cola_dr":{
-	width:"3%",
-	height:"6%",
+"#carro_iz":{
+	width:"17%",
+	height:"15%",
 	top:"37%",
-	left:"85.5%",
+	left:"0%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#fuego_iz":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"37%",
+"#aveja_iz":{
+	width:"15%",
+	height:"15.5%",
+	top:"62%",
+	left:"32%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#fuego_dr":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"89%",
+"#flor_iz":{
+	width:"5%",
+	height:"8%",
+	top:"69%",
+	left:"2%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#nube_iz":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
-	left:"27.5%",
+//
+"#puerta_dr":{
+	width:"7%",
+	height:"18%",
+	top:"22.5%",
+	left:"69%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#nube_dr":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
-	left:"67%",
+"#rueda_dr":{
+	width:"5%",
+	height:"5%",
+	top:"37%",
+	left:"88%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
+"#carro_dr":{
+	width:"17%",
+	height:"15%",
+	top:"37%",
+	left:"51.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#aveja_dr":{
+	width:"15%",
+	height:"15.5%",
+	top:"62%",
+	left:"83.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#flor_dr":{
+	width:"5%",
+	height:"8%",
+	top:"69%",
+	left:"53.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+//
 "#estrella_1":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	left:"10%",

@@ -5,16 +5,16 @@
 		</View>
 		<View id="view_body">
 			<View id="imagen">
-				<Button id="cara_iz"></Button>
-				<Button id="nariz_iz"></Button>
-				<Button id="diario_iz_1"></Button>
-				<Button id="diario_iz_2"></Button>
-				<Button id="cara_dr"></Button>
-				<Button id="nariz_dr"></Button>
-				<Button id="diario_dr_1"></Button>
-				<Button id="diario_dr_2"></Button>
-				<Button id="brazo_iz"></Button>
-				<Button id="brazo_dr"></Button>
+				<Button id="rueda_iz"></Button>
+				<Button id="puerta_iz"></Button>
+				<Button id="carro_iz"></Button>
+				<Button id="aveja_iz"></Button>
+				<Button id="flor_iz"></Button>
+				<Button id="rueda_dr"></Button>
+				<Button id="puerta_dr"></Button>
+				<Button id="carro_dr"></Button>
+				<Button id="aveja_dr"></Button>
+				<Button id="flor_dr"></Button>
 			</View>
 		</View>
 		<View id="view_footer">

@@ -7,6 +7,8 @@ var aux_diario_iz_1=false;
 var aux_diario_dr_1=false;
 var aux_diario_iz_2=false;
 var aux_diario_dr_2=false;
+var aux_brazo_iz=false;
+var aux_brazo_dr=false;
 
 var punto=0;
 
@@ -16,31 +18,71 @@ function estrella (punto) {
 		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 	}
 	if(punto==1){
 		$.estrella_1.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 	}
 	if(punto==2){
 		$.estrella_1.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 	}
 	if(punto==3){
 		$.estrella_1.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
 	}
 	if(punto==4){
 		$.estrella_1.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
-		alert("¡Felicitaciones!");
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png";
+	}
+	if(punto==5){
+		$.estrella_1.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
+		$.estrella_2.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
+		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
+		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
+		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
+		var dialog = Ti.UI.createAlertDialog({
+			title: 'Felicitaciones',
+			message: '¡Bien! ¡Vamos a siguiente nivel!',
+			cancel: 1,
+    		buttonNames: ['Vamos', 'Cacelar']
+		});
+		dialog.show();
+		//Desbloquear siguiente nivel.
+		Ti.App.Properties.removeProperty("TF_diferencias2");
+		Ti.App.Properties.setBool("TF_diferencias2",true);
+		
+		dialog.addEventListener('click', function(e){
+			var aux_click=e.text;
+			Ti.API.info(aux_click);
+			if (e.index === e.source.cancel){
+				clearInterval(change_view);
+		      	Ti.API.info('The cancel button was clicked');
+		    }
+			else{
+				var nivel_3=Alloy.createController('nivel_3').getView();
+				nivel_3.open();
+			}	
+		});
+		var change_view=setInterval(function(){
+			dialog.hide();
+			var nivel_3=Alloy.createController('nivel_3').getView();
+			nivel_3.open();
+			clearInterval(change_view);
+		},5000);
 	}
 }
 $.cara_iz.add.addEventListener('click',function(e){
@@ -123,6 +165,26 @@ $.diario_dr_2.add.addEventListener('click',function(e){
 		estrella (punto);
 	}
 });
+$.brazo_iz.add.addEventListener('click',function(e){
+	if(aux_brazo_iz==false){
+		aux_brazo_iz=true;
+		aux_brazo_dr=true;
+		punto=punto+1;
+		$.brazo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.brazo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		estrella (punto);
+	}
+});
+$.brazo_dr.add.addEventListener('click',function(e){
+	if(aux_brazo_dr==false){
+		aux_brazo_iz=true;
+		aux_brazo_dr=true;
+		punto=punto+1;
+		$.brazo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.brazo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		estrella (punto);
+	}
+});
 $.label_AT.add.addEventListener('click',function(e){
 	$.win.close();
 });
@@ -130,20 +192,21 @@ $.anterior.add.addEventListener('click',function(e){
 	$.win.close();
 });
 $.label_SG.add.addEventListener('click',function(e){
-	if(punto==4){
-		var nivel_2=Alloy.createController('nivel_2').getView();
-		nivel_2.open();
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias2")==true){
+		var nivel_3=Alloy.createController('nivel_3').getView();
+		nivel_3.open();
 	}
 	else{
 		alert("¡Todavía no terminas el juego!");
 	}
 });
 $.siguiente.add.addEventListener('click',function(e){
-	//if(punto==4){
+	Ti.API.info("valor :"+Ti.App.Properties.getBool("TF_diferencias2"));
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias2")==true){
 		var nivel_3=Alloy.createController('nivel_3').getView();
 		nivel_3.open();
-	//}
-	//else{
-	//	alert("¡Todavía no terminas el juego!");
-	//}
+	}
+	else{
+		alert("¡Todavía no terminas el juego!");
+	}
 });

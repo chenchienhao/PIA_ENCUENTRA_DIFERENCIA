@@ -30,114 +30,137 @@
 }
 
 "#imagen":{
-	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 1 - (5).png",
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 8 - (5).png",
 	width: "100%",
 	height: "100%"
 }
-"#ojo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"18%",
+"#maliposa_iz":{
+	width:"8%",
+	height:"8%",
+	top:"9%",
+	left:"19%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#ojo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"70%",
+"#chinita_iz":{
+	width:"8%",
+	height:"8%",
+	top:"35%",
+	left:"14%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"25.5%",
+"#hojas_iz":{
+	width:"8%",
+	height:"10%",
+	top:"58.5%",
+	left:"4%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"77.5%",
+"#caracol_iz":{
+	width:"7%",
+	height:"7%",
+	top:"58.5%",
+	left:"28%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#cola_iz":{
-	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"33.5%",
+"#pelo_iz":{
+	width:"4%",
+	height:"4%",
+	top:"58.5%",
+	left:"39.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#cola_dr":{
-	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"85.5%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#fuego_iz":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
+"#tierra_iz":{
+	width:"5%",
+	height:"5%",
+	top:"87.5%",
 	left:"37%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#fuego_dr":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"89%",
+//
+"#maliposa_dr":{
+	width:"8%",
+	height:"8%",
+	top:"11%",
+	left:"68%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#nube_iz":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
-	left:"27.5%",
+"#chinita_dr":{
+	width:"7%",
+	height:"7%",
+	top:"83%",
+	left:"92%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#nube_dr":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
-	left:"67%",
+"#hojas_dr":{
+	width:"8%",
+	height:"11%",
+	top:"57.5%",
+	left:"53.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
+"#caracol_dr":{
+	width:"7%",
+	height:"7%",
+	top:"60.5%",
+	left:"78%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#pelo_dr":{
+	width:"4%",
+	height:"4%",
+	top:"59.5%",
+	left:"88.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#tierra_dr":{
+	width:"5%",
+	height:"5%",
+	top:"89%",
+	left:"86%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+//
 "#estrella_1":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	left:"10%",
-	width: "10%",
+	width: "8%",
 	height: "40%"
 }
 "#estrella_2":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
-	width: "10%",
+	width: "8%",
 	height: "40%"
 }
 "#estrella_3":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
-	width: "10%",
+	width: "8%",
 	height: "40%"
 }
 "#estrella_4":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
-	width: "10%",
+	width: "8%",
 	height: "40%"
 }
 "#estrella_5":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
-	width: "10%",
+	width: "8%",
+	height: "40%"
+}
+"#estrella_6":{
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
+	width: "8%",
 	height: "40%"
 }
 "#anterior":{

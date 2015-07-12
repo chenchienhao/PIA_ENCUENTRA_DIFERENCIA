@@ -1,14 +1,14 @@
 
+var aux_pelo_iz=false;
+var aux_pelo_dr=false;
 var aux_ojo_iz=false;
 var aux_ojo_dr=false;
-var aux_circulo_iz=false;
-var aux_circulo_dr=false;
-var aux_cola_iz=false;
-var aux_cola_dr=false;
-var aux_fuego_iz=false;
-var aux_fuego_dr=false;
-var aux_nube_iz=false;
-var aux_nube_dr=false;
+var aux_nariz_iz=false;
+var aux_nariz_dr=false;
+var aux_sombra_iz=false;
+var aux_sombra_dr=false;
+var aux_guata_iz=false;
+var aux_guata_dr=false;
 
 var punto=0;
 
@@ -62,8 +62,8 @@ function estrella (punto) {
 		});
 		dialog.show();
 		//Desbloquear siguiente nivel.
-		Ti.App.Properties.removeProperty("TF_diferencias1");
-		Ti.App.Properties.setBool("TF_diferencias1",true);
+		Ti.App.Properties.removeProperty("TF_diferencias9");
+		Ti.App.Properties.setBool("TF_diferencias9",true);
 		
 		dialog.addEventListener('click', function(e){
 			var aux_click=e.text;
@@ -73,18 +73,38 @@ function estrella (punto) {
 		      	Ti.API.info('The cancel button was clicked');
 		    }
 			else{
-				var nivel_2=Alloy.createController('nivel_2').getView();
-				nivel_2.open();
+				var nivel_10=Alloy.createController('nivel_10').getView();
+				nivel_10.open();
 			}	
 		});
 		var change_view=setInterval(function(){
 			dialog.hide();
-			var nivel_2=Alloy.createController('nivel_2').getView();
-			nivel_2.open();
+			var nivel_10=Alloy.createController('nivel_10').getView();
+			nivel_10.open();
 			clearInterval(change_view);
 		},5000);
 	}
 }
+$.pelo_iz.add.addEventListener('click',function(e){
+	if(aux_pelo_iz==false){
+		aux_pelo_iz=true;
+		aux_pelo_dr=true;
+		punto=punto+1;
+		$.pelo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		estrella (punto);
+	}
+});
+$.pelo_dr.add.addEventListener('click',function(e){
+	if(aux_pelo_dr==false){
+		aux_pelo_iz=true;
+		aux_pelo_dr=true;
+		punto=punto+1;
+		$.pelo_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.pelo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		estrella (punto);
+	}
+});
 $.ojo_iz.add.addEventListener('click',function(e){
 	if(aux_ojo_iz==false){
 		aux_ojo_iz=true;
@@ -105,115 +125,91 @@ $.ojo_dr.add.addEventListener('click',function(e){
 		estrella (punto);
 	}
 });
-$.circulo_iz.add.addEventListener('click',function(e){
-	if(aux_circulo_iz==false){
-		aux_circulo_iz=true;
-		aux_circulo_dr=true;
+$.nariz_iz.add.addEventListener('click',function(e){
+	if(aux_nariz_iz==false){
+		aux_nariz_iz=true;
+		aux_nariz_dr=true;
 		punto=punto+1;
-		$.circulo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.circulo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.circulo_dr.add.addEventListener('click',function(e){
-	if(aux_circulo_dr==false){
-		aux_circulo_iz=true;
-		aux_circulo_dr=true;
+$.nariz_dr.add.addEventListener('click',function(e){
+	if(aux_nariz_dr==false){
+		aux_nariz_iz=true;
+		aux_nariz_dr=true;
 		punto=punto+1;
-		$.circulo_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.circulo_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.nariz_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.cola_iz.add.addEventListener('click',function(e){
-	if(aux_cola_iz==false){
-		aux_cola_iz=true;
-		aux_cola_dr=true;
+$.sombra_iz.add.addEventListener('click',function(e){
+	if(aux_sombra_iz==false){
+		aux_sombra_iz=true;
+		aux_sombra_dr=true;
 		punto=punto+1;
-		$.cola_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cola_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.sombra_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.sombra_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.cola_dr.add.addEventListener('click',function(e){
-	if(aux_cola_dr==false){
-		aux_cola_iz=true;
-		aux_cola_dr=true;
+$.sombra_dr.add.addEventListener('click',function(e){
+	if(aux_sombra_dr==false){
+		aux_sombra_iz=true;
+		aux_sombra_dr=true;
 		punto=punto+1;
-		$.cola_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.cola_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.sombra_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.sombra_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.fuego_iz.add.addEventListener('click',function(e){
-	if(aux_fuego_iz==false){
-		aux_fuego_iz=true;
-		aux_fuego_dr=true;
+
+//
+$.guata_iz.add.addEventListener('click',function(e){
+	if(aux_guata_iz==false){
+		aux_guata_iz=true;
+		aux_guata_dr=true;
 		punto=punto+1;
-		$.fuego_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.fuego_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.guata_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.guata_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
-$.fuego_dr.add.addEventListener('click',function(e){
-	if(aux_fuego_dr==false){
-		aux_fuego_iz=true;
-		aux_fuego_dr=true;
+$.guata_dr.add.addEventListener('click',function(e){
+	if(aux_guata_dr==false){
+		aux_guata_iz=true;
+		aux_guata_dr=true;
 		punto=punto+1;
-		$.fuego_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.fuego_dr.backgroundColor="rgba(255,0,0,0.5)";
+		$.guata_iz.backgroundColor="rgba(255,0,0,0.5)";
+		$.guata_dr.backgroundColor="rgba(255,0,0,0.5)";
 		estrella (punto);
 	}
 });
 //
-$.nube_iz.add.addEventListener('click',function(e){
-	if(aux_nube_iz==false){
-		aux_nube_iz=true;
-		aux_nube_dr=true;
-		punto=punto+1;
-		$.nube_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.nube_dr.backgroundColor="rgba(255,0,0,0.5)";
-		estrella (punto);
-	}
-});
-$.nube_dr.add.addEventListener('click',function(e){
-	if(aux_nube_dr==false){
-		aux_nube_iz=true;
-		aux_nube_dr=true;
-		punto=punto+1;
-		$.nube_iz.backgroundColor="rgba(255,0,0,0.5)";
-		$.nube_dr.backgroundColor="rgba(255,0,0,0.5)";
-		estrella (punto);
-	}
-});
-//
+
 $.label_AT.add.addEventListener('click',function(e){
-	var inicio=Alloy.createController('index').getView();
-	inicio.open();
+	$.win.close();
 });
 $.anterior.add.addEventListener('click',function(e){
-	var inicio=Alloy.createController('index').getView();
-	inicio.open();
+	$.win.close();
 });
 $.label_SG.add.addEventListener('click',function(e){
-	//El caso desbloqueado
-	if(punto==5||Ti.App.Properties.getBool("TF_diferencias1")==true){
-		var nivel_2=Alloy.createController('nivel_2').getView();
-		nivel_2.open();
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias9")==true){
+		var nivel_10=Alloy.createController('nivel_10').getView();
+		nivel_10.open();
 	}
 	else{
 		alert("¡Todavía no terminas el juego!");
 	}
 });
 $.siguiente.add.addEventListener('click',function(e){
-	Ti.API.info("valor :"+Ti.App.Properties.getBool("TF_diferencias1"));
-	//El caso desbloqueado
-	if(punto==5||Ti.App.Properties.getBool("TF_diferencias1")==true){
-	var nivel_2=Alloy.createController('nivel_2').getView();
-		nivel_2.open();
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias9")==true){
+		var nivel_10=Alloy.createController('nivel_10').getView();
+		nivel_10.open();
 	}
 	else{
 		alert("¡Todavía no terminas el juego!");
 	}
 });
-$.index.open();

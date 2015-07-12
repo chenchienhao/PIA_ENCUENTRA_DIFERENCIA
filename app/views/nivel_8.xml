@@ -5,16 +5,18 @@
 		</View>
 		<View id="view_body">
 			<View id="imagen">
-				<Button id="cara_iz"></Button>
-				<Button id="nariz_iz"></Button>
-				<Button id="diario_iz_1"></Button>
-				<Button id="diario_iz_2"></Button>
-				<Button id="cara_dr"></Button>
-				<Button id="nariz_dr"></Button>
-				<Button id="diario_dr_1"></Button>
-				<Button id="diario_dr_2"></Button>
-				<Button id="brazo_iz"></Button>
-				<Button id="brazo_dr"></Button>
+				<Button id="maliposa_iz"></Button>
+				<Button id="chinita_iz"></Button>
+				<Button id="pelo_iz"></Button>
+				<Button id="hojas_iz"></Button>
+				<Button id="tierra_iz"></Button>
+				<Button id="caracol_iz"></Button>
+				<Button id="maliposa_dr"></Button>
+				<Button id="chinita_dr"></Button>
+				<Button id="pelo_dr"></Button>
+				<Button id="hojas_dr"></Button>
+				<Button id="tierra_dr"></Button>
+				<Button id="caracol_dr"></Button>
 			</View>
 		</View>
 		<View id="view_footer">
@@ -25,6 +27,7 @@
 			<ImageView id="estrella_3"></ImageView>
 			<ImageView id="estrella_4"></ImageView>
 			<ImageView id="estrella_5"></ImageView>
+			<ImageView id="estrella_6"></ImageView>
 			<Label id="label_SG">Siguiente</Label>
 			<ImageView id="siguiente"></ImageView>
 		</View>

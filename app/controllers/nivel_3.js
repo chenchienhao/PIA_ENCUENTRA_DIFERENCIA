@@ -54,7 +54,35 @@ function estrella (punto) {
 		$.estrella_3.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_4.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
 		$.estrella_5.backgroundImage="/imagen/Tolerancia a la frustración/Diferencias/Estrella_amarilla.png";
-		alert("¡Felicitaciones!");
+		var dialog = Ti.UI.createAlertDialog({
+			title: 'Felicitaciones',
+			message: '¡Bien! ¡Vamos a siguiente nivel!',
+			cancel: 1,
+    		buttonNames: ['Vamos', 'Cacelar']
+		});
+		dialog.show();
+		//Desbloquear siguiente nivel.
+		Ti.App.Properties.removeProperty("TF_diferencias3");
+		Ti.App.Properties.setBool("TF_diferencias3",true);
+		
+		dialog.addEventListener('click', function(e){
+			var aux_click=e.text;
+			Ti.API.info(aux_click);
+			if (e.index === e.source.cancel){
+				clearInterval(change_view);
+		      	Ti.API.info('The cancel button was clicked');
+		    }
+			else{
+				var nivel_4=Alloy.createController('nivel_4').getView();
+				nivel_4.open();
+			}	
+		});
+		var change_view=setInterval(function(){
+			dialog.hide();
+			var nivel_4=Alloy.createController('nivel_4').getView();
+			nivel_4.open();
+			clearInterval(change_view);
+		},5000);
 	}
 }
 $.boca_iz.add.addEventListener('click',function(e){
@@ -168,7 +196,7 @@ $.anterior.add.addEventListener('click',function(e){
 	$.win.close();
 });
 $.label_SG.add.addEventListener('click',function(e){
-	if(punto==5){
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias3")==true){
 		var nivel_4=Alloy.createController('nivel_4').getView();
 		nivel_4.open();
 	}
@@ -177,11 +205,11 @@ $.label_SG.add.addEventListener('click',function(e){
 	}
 });
 $.siguiente.add.addEventListener('click',function(e){
-	//if(punto==5){
+	if(punto==5||Ti.App.Properties.getBool("TF_diferencias3")==true){
 		var nivel_4=Alloy.createController('nivel_4').getView();
 		nivel_4.open();
-	//}
-	//else{
-	//	alert("¡Todavía no terminas el juego!");
-	//}
+	}
+	else{
+		alert("¡Todavía no terminas el juego!");
+	}
 });

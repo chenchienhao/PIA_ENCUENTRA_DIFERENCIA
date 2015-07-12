@@ -66,6 +66,22 @@
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
+"#brazo_iz":{
+	width:"6%",
+	height:"6%",
+	top:"55%",
+	left:"23%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#brazo_dr":{
+	width:"6%",
+	height:"6%",
+	top:"55%",
+	left:"76%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
 //
 "#cara_dr":{
 	width:"4.5%",
@@ -117,6 +133,11 @@
 	height: "40%"
 }
 "#estrella_4":{
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
+	width: "10%",
+	height: "40%"
+}
+"#estrella_5":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	width: "10%",
 	height: "40%"

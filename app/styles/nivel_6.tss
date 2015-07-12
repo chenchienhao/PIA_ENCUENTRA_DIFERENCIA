@@ -30,90 +30,124 @@
 }
 
 "#imagen":{
-	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 1 - (5).png",
+	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/diferencia 6 - (5).png",
 	width: "100%",
 	height: "100%"
 }
-"#ojo_iz":{
-	width:"3%",
-	height:"3%",
+"#ojo1_iz":{
+	width:"5%",
+	height:"5%",
+	top:"25.5%",
+	left:"21%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#ojo2_iz":{
+	width:"5%",
+	height:"5%",
 	top:"29%",
-	left:"18%",
+	left:"15%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#ojo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"29%",
-	left:"70%",
+"#bigote1_iz":{
+	width:"7%",
+	height:"7%",
+	top:"28%",
+	left:"28%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_iz":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"25.5%",
+"#bigote2_iz":{
+	width:"7%",
+	height:"7%",
+	top:"40%",
+	left:"12%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#circulo_dr":{
-	width:"3%",
-	height:"3%",
-	top:"32.5%",
-	left:"77.5%",
+"#collar_iz":{
+	width:"4%",
+	height:"4%",
+	top:"43%",
+	left:"24%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
 "#cola_iz":{
-	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"33.5%",
+	width:"5%",
+	height:"5%",
+	top:"30%",
+	left:"41%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#cola_dr":{
-	width:"3%",
-	height:"6%",
-	top:"37%",
-	left:"85.5%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#fuego_iz":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"37%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#fuego_dr":{
-	width:"3%",
-	height:"3%",
-	top:"39%",
-	left:"89%",
-	backgroundColor:"transparent",
-	borderRadius: "10"
-}
-"#nube_iz":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
+"#sombra_iz":{
+	width:"4%",
+	height:"4%",
+	top:"56%",
 	left:"27.5%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
-"#nube_dr":{
-	width:"13%",
-	height:"13%",
-	top:"63%",
-	left:"67%",
+//
+"#ojo1_dr":{
+	width:"5%",
+	height:"5%",
+	top:"25.5%",
+	left:"61%",
 	backgroundColor:"transparent",
 	borderRadius: "10"
 }
+"#ojo2_dr":{
+	width:"5%",
+	height:"5%",
+	top:"29%",
+	left:"55.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#bigote1_dr":{
+	width:"7%",
+	height:"7%",
+	top:"26.5%",
+	left:"68%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#bigote2_dr":{
+	width:"7%",
+	height:"7%",
+	top:"39%",
+	left:"52%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#collar_dr":{
+	width:"4%",
+	height:"4%",
+	top:"43%",
+	left:"65%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#cola_dr":{
+	width:"5%",
+	height:"5%",
+	top:"30%",
+	left:"81%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+"#sombra_dr":{
+	width:"4%",
+	height:"4%",
+	top:"56%",
+	left:"67.5%",
+	backgroundColor:"transparent",
+	borderRadius: "10"
+}
+//
 "#estrella_1":{
 	backgroundImage:"/imagen/Tolerancia a la frustración/Diferencias/Estrella_vacio.png",
 	left:"10%",
